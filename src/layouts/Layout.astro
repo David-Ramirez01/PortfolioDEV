@@ -1,4 +1,8 @@
-<!doctype html>
+---
+import Head from "../components/Head.astro";
+import "../styles/global.css";
+---
+
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -8,6 +12,18 @@
     <title>Portfolio</title>
   </head>
   <body>
+    <Head />
     <slot />
   </body>
 </html>
+
+<style is:global>
+  html {
+    background:;
+    font-family: system-ui, sans-serif;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+  }
+</style>
