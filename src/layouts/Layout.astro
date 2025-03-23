@@ -1,6 +1,7 @@
 ---
 import Head from "../components/Head.astro";
-import "../styles/global.css";
+import "../styles/global.css";// Supports weights 400-900
+import '@fontsource-variable/playfair-display';
 ---
 
 <html lang="es">
@@ -22,13 +23,14 @@ import "../styles/global.css";
     color-scheme: dark light;
   }
   html {
-    background: #111111 ; 
+    
     color: flex: 1 1 auto;
-    font-family: system-ui, sans-serif;
+    font-family: 'Playfair Display Variable' , system-ui, sans-serif;
   }
   body {
+    background: #111111 ; 
     display: flex;
-    justify-content: center;
-    min-height: 100vh ;
+    flex-direction: column;
+    height: 100vh ;
   }
 </style>
