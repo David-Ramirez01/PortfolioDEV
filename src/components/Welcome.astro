@@ -5,6 +5,7 @@ import Github from "./Icons/Github.astro";
 import Badge from "./Badge.astro";
 import Linkedin from "./Icons/Linkedin.astro";
 import SocialPill from "./Icons/SocialPill.astro";
+import Mail from "./Icons/mail.astro";
 ---
 
 <main>
@@ -32,12 +33,16 @@ import SocialPill from "./Icons/SocialPill.astro";
     </h2>
     <nav class="flex flex-row gap-x-2 mt-4">
       <SocialPill href="https://www.linkedin.com/in/a-david-nino/">
-        <Linkedin class="w-6 h-6" />
+        <Linkedin class="size-6" />
         Linkedin
       </SocialPill>
       <SocialPill href="https://github.com/David-Ramirez01">
-        <Github class="w-6 h-6" />
+        <Github class="size-6" />
         Github
+      </SocialPill>
+      <SocialPill>
+        <Mail class="size-6" />
+        aimardavidninor@hotmail.com
       </SocialPill>
     </nav>
   </section>
