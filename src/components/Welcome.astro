@@ -6,10 +6,12 @@ import Badge from "./Badge.astro";
 import Linkedin from "./Icons/Linkedin.astro";
 import SocialPill from "./Icons/SocialPill.astro";
 import Mail from "./Icons/mail.astro";
+import Experience from "./Experience.astro";
+import SectionContainer from "./SectionContainer.astro";
 ---
 
 <main>
-  <section class="w-full lg:w-[740px] mx-auto py-44">
+  <SectionContainer class="py-44 pb-20">
     <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
       <img
         src="/src/assets/Foto.jpg"
@@ -22,7 +24,7 @@ import Mail from "./Icons/mail.astro";
         rel="noopener"
         class="flex justify-center items-center"
       >
-        <Badge> Disponible</Badge>
+        <Badge> Disponible para trabajar</Badge>
       </a>
     </h1>
     <h2 class="text-xl text-wrap">
@@ -45,5 +47,9 @@ import Mail from "./Icons/mail.astro";
         aimardavidninor@hotmail.com
       </SocialPill>
     </nav>
-  </section>
+  </SectionContainer>
+  <SectionContainer id="Experiencia">
+    <h2 class="text-2xl fond-semibold mb-8">Experiencia laboral</h2>
+    <Experience />
+  </SectionContainer>
 </main>

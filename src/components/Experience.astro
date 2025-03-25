@@ -1,0 +1,32 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const exp = [
+  {
+    date: "Actualmente",
+    title: "Analista de soporte para TI",
+    description:
+      "Reviso y escalo las solicitudes y/o requerimientos realizados por los usuarios en la zona de la Costa Atlántica, garantizando una atención adecuada y oportuna.",
+  },
+  {
+    date: "mayo 2024 - julio 2024",
+    title: "Especialista en soporte técnico",
+    description:
+      "Atencion via telefonica las peticiones/ quejas y reclamos de los usuarios e intentar solventar los inconvenientes que presernten, de no ser posible solventar el inconveniente realizar el escalamiento apropiado al area correspondiente",
+  },
+  {
+    date: "julio 2023 - febrero 2024",
+    title: "Auxiliar de sistemas",
+    description: "Practicas profecionales en el area de sistemas de la empresa",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    exp.map((item) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...item} />
+      </li>
+    ))
+  }
+</ol>
