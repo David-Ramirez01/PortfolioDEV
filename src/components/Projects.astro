@@ -1,0 +1,53 @@
+---
+const Prj = [
+  {
+    title: "Autenticación",
+    description:
+      "Creación de una web en la que se utilizan herramientas de autenticación para verificar usuarios",
+    link: "#",
+    github: "https://github.com/David-Ramirez01/Test-CB",
+    image: "https://placehold.co/300x200",
+    tags: [
+      "HTML",
+      "JavaScript",
+      "React.JS",
+      "Firebase",
+      "boostrap",
+      "typeSript",
+    ],
+  },
+  {
+    title: "Notes App",
+    description:
+      "proyecto Web utilizando Laravel(PHP) y JavaScript para la creación de notas",
+    link: "#",
+    github: "https://github.com/David-Ramirez01/app_notas",
+    image: "https://placehold.co/400x200",
+    tags: ["Laravel", "PHP", "JavaScript", "CSS"],
+  },
+  {
+    title: "Buenas Practicas",
+    description:
+      "Demostracion de buenas practicas de programacion utilizando el framework web React.js",
+    link: "#",
+    github: "https://github.com/David-Ramirez01/Proyecto_BP_Frontend",
+    image: "https://placehold.co/400x200",
+    tags: ["JavaScript", ">HTML", "boostrap", "React.JS"],
+  },
+];
+---
+
+{
+  Prj.map(({ title, description, link, github, image, tags }) => (
+    <article>
+      <h2>{title}</h2>
+      <p>{description}</p>
+      <ul>
+        {tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+      {image && <img src={image} alt="Captura de pantalla del proyecto" />}
+    </article>
+  ))
+}
