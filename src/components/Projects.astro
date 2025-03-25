@@ -6,15 +6,8 @@ const Prj = [
       "Creación de una web en la que se utilizan herramientas de autenticación para verificar usuarios",
     link: "#",
     github: "https://github.com/David-Ramirez01/Test-CB",
-    image: "https://placehold.co/300x200",
-    tags: [
-      "HTML",
-      "JavaScript",
-      "React.JS",
-      "Firebase",
-      "boostrap",
-      "typeSript",
-    ],
+    image: "/public/projects/auth.webp",
+    tags: ["React.JS", "Firebase", "boostrap", "typeSript"],
   },
   {
     title: "Notes App",
@@ -39,15 +32,21 @@ const Prj = [
 
 {
   Prj.map(({ title, description, link, github, image, tags }) => (
-    <article>
-      <h2>{title}</h2>
-      <p>{description}</p>
-      <ul>
+    <article class="py-2">
+      <h2 class="text-2xl font-semibold text-blue-400/80 mb-2">{title}</h2>
+      <p class="text-lg mb-2 text-pretty">{description}</p>
+      <ul class="flex flex-row gap-x-2 mb-2">
         {tags.map((tag) => (
           <li>{tag}</li>
         ))}
       </ul>
-      {image && <img src={image} alt="Captura de pantalla del proyecto" />}
+      {image && (
+        <img
+          class="roundes shadow-2xl shadow-white/10"
+          src={image}
+          alt="Captura de pantalla del proyecto"
+        />
+      )}
     </article>
   ))
 }
