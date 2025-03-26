@@ -4,6 +4,7 @@ import FirebaseIcon from "./Icons/Firebase.astro";
 import boostrapIcon from "./Icons/bootstrap.astro";
 import TypeScriptIcon from "./Icons/TypeScript.astro";
 import LaravelIcon from "./Icons/Laravel.astro";
+import GithubIcon from "./Icons/Github.astro";
 
 const TAGS = {
   React: {
@@ -57,30 +58,43 @@ const Prj = [
 
 {
   Prj.map(({ title, description, link, github, image, tags }) => (
-    <article class="py-2">
-      <h2 class="text-2xl font-semibold text-blue-400/80 mb-2">{title}</h2>
-      <p class="text-lg mb-2 text-pretty">{description}</p>
-      <ul class="flex flex-row gap-x-4 mb-2">
-        {tags.map((tag) => (
-          <span>
-            <li>
-              <span
-                class={`flex gap-x-2 text-sm items-center rounded-4xl ${tag.class} py-1 px-2`}
-              >
-                <tag.icon class="size-8" />
-                {tag.name}
-              </span>
-            </li>
-          </span>
-        ))}
-      </ul>
+    <article class="flex flex-col items-center md:flex-row ">
       {image && (
         <img
-          class="rounded-xl shadow-2xl shadow-white/10 w-lg h-lg hover:scale-110 transition-transform"
+          class="rounded-xl sm:rounded-xl shadow-2xl shadow-white/10 w-lg h-50"
           src={image}
           alt="Captura de pantalla del proyecto"
         />
       )}
+      <div class="flex flex-col justify-between p-4 leading-normal">
+        <h2 class="text-2xl font-semibold text-blue-400/80 mb-2">{title}</h2>
+        <ul class="flex flex-row gap-x-4 mb-2">
+          {tags.map((tag) => (
+            <span>
+              <li>
+                <span
+                  class={`flex gap-x-2 text-sm items-center rounded-4xl ${tag.class} py-1 px-2`}
+                >
+                  <tag.icon class="size-5" />
+                  {tag.name}
+                </span>
+              </li>
+            </span>
+          ))}
+        </ul>
+        <p class="mt-2 text-pretty text-gray-700 dark:text-gray-400 py-2">
+          {description}
+        </p>
+        <div class="flex items-end justify-start mt-4 gap-x-4">
+          <a
+            href={github}
+            target="_blank"
+            class="text-xl rounded-xl border border-white/10 flex justify-center items-center gap-x-2 py-2 px-4 bg-white/5 hover:bg-white/10 hover:scale-108 transition-transform"
+          >
+            <GithubIcon class="size-4" /> Code
+          </a>
+        </div>
+      </div>
     </article>
   ))
 }
