@@ -1,4 +1,38 @@
 ---
+import ReactIcon from "./Icons/ReactIcon.astro";
+import FirebaseIcon from "./Icons/Firebase.astro";
+import boostrapIcon from "./Icons/bootstrap.astro";
+import TypeScriptIcon from "./Icons/TypeScript.astro";
+import LaravelIcon from "./Icons/Laravel.astro";
+
+const TAGS = {
+  React: {
+    name: "React.JS",
+    class: "bg-blue-400 text-white",
+    icon: ReactIcon,
+  },
+  Firebase: {
+    name: "Firebase",
+    class: "bg-yellow-400 text-black",
+    icon: FirebaseIcon,
+  },
+  boostrap: {
+    name: "boostrap",
+    class: "bg-purple-400 text-white",
+    icon: boostrapIcon,
+  },
+  typeSript: {
+    name: "typeSript",
+    class: "bg-blue-400 text-white",
+    icon: TypeScriptIcon,
+  },
+  Laravel: {
+    name: "Laravel",
+    class: "bg-red-400 text-white",
+    icon: LaravelIcon,
+  },
+};
+
 const Prj = [
   {
     title: "Autenticación",
@@ -7,7 +41,7 @@ const Prj = [
     link: "#",
     github: "https://github.com/David-Ramirez01/Test-CB",
     image: "/projects/auth.webp",
-    tags: ["React.JS", "Firebase", "boostrap", "typeSript"],
+    tags: [TAGS.React, TAGS.Firebase, TAGS.boostrap, TAGS.typeSript],
   },
   {
     title: "Notes App",
@@ -16,7 +50,7 @@ const Prj = [
     link: "#",
     github: "https://github.com/David-Ramirez01/app_notas",
     image: "https://placehold.co/400x200",
-    tags: ["Laravel", "PHP", "JavaScript", "CSS"],
+    tags: [TAGS.Laravel, TAGS.typeSript],
   },
 ];
 ---
@@ -26,11 +60,16 @@ const Prj = [
     <article class="py-2">
       <h2 class="text-2xl font-semibold text-blue-400/80 mb-2">{title}</h2>
       <p class="text-lg mb-2 text-pretty">{description}</p>
-      <ul class="flex flex-row gap-x-2 mb-2">
+      <ul class="flex flex-row gap-x-4 mb-2">
         {tags.map((tag) => (
           <span>
-            <li class="flex gap-x-2 rounded-full text-xs py-1 px-2 bg-sky-400 text-black">
-              {tag}
+            <li>
+              <span
+                class={`flex gap-x-2 text-sm items-center rounded-4xl ${tag.class} py-1 px-2`}
+              >
+                <tag.icon class="size-8" />
+                {tag.name}
+              </span>
             </li>
           </span>
         ))}
