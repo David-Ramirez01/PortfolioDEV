@@ -3,6 +3,7 @@ import Head from "../components/Head.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";// Supports weights 400-900
 import '@fontsource-variable/playfair-display';
+import Piecera from "../components/Footer.astro";
 ---
 
 <html lang="es">
@@ -14,11 +15,11 @@ import '@fontsource-variable/playfair-display';
     <meta name="generator" content={Astro.generator} />
     <title>Portfolio de Aimar Programador y desarrollador web</title>
   </head>
-  <body>
+  <body >
     <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
       <Head />
       <slot />
-      <Footer/>
+      <Piecera />
     </div>
   </body>
 </html>
@@ -38,6 +39,7 @@ import '@fontsource-variable/playfair-display';
     flex-direction: column;
     min-height: 100vh ;
     scroll-behavior: smooth;
+    padding-bottom: 20px;
   }
 
   @media (prefers-reduced-motion: reduce) {

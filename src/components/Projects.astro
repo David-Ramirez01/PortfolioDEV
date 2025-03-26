@@ -6,7 +6,7 @@ const Prj = [
       "Creación de una web en la que se utilizan herramientas de autenticación para verificar usuarios",
     link: "#",
     github: "https://github.com/David-Ramirez01/Test-CB",
-    image: "/public/projects/auth.webp",
+    image: "/projects/auth.webp",
     tags: ["React.JS", "Firebase", "boostrap", "typeSript"],
   },
   {
@@ -18,15 +18,6 @@ const Prj = [
     image: "https://placehold.co/400x200",
     tags: ["Laravel", "PHP", "JavaScript", "CSS"],
   },
-  {
-    title: "Buenas Practicas",
-    description:
-      "Demostracion de buenas practicas de programacion utilizando el framework web React.js",
-    link: "#",
-    github: "https://github.com/David-Ramirez01/Proyecto_BP_Frontend",
-    image: "https://placehold.co/400x200",
-    tags: ["JavaScript", ">HTML", "boostrap", "React.JS"],
-  },
 ];
 ---
 
@@ -37,12 +28,16 @@ const Prj = [
       <p class="text-lg mb-2 text-pretty">{description}</p>
       <ul class="flex flex-row gap-x-2 mb-2">
         {tags.map((tag) => (
-          <li>{tag}</li>
+          <span>
+            <li class="flex gap-x-2 rounded-full text-xs py-1 px-2 bg-sky-400 text-black">
+              {tag}
+            </li>
+          </span>
         ))}
       </ul>
       {image && (
         <img
-          class="roundes shadow-2xl shadow-white/10"
+          class="rounded-xl shadow-2xl shadow-white/10 w-lg h-lg hover:scale-110 transition-transform"
           src={image}
           alt="Captura de pantalla del proyecto"
         />
