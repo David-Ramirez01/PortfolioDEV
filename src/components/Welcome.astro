@@ -9,18 +9,15 @@ import SectionContainer from "./SectionContainer.astro";
 import CodeIcon from "./Icons/CodeIcon.astro";
 import ExperienceIcon from "./Icons/ExperienceIcon.astro";
 import Prj from "./Projects.astro";
+import UserIcon from "./Icons/UserIcon.astro";
 ---
 
-<main>
+<main class="flex flex-col gap-y-6 mb-10">
   <SectionContainer class="py-40 pb-15" id="Top">
     <h1
       class="text-white text-2xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-10"
     >
-      <img
-        src="/src/assets/Foto.jpg"
-        class="rounded-full w-15 h-16"
-        alt="Aimar photo"
-      />
+      <img src="/Foto.webp" class="rounded-full w-15 h-16" alt="Aimar photo" />
       Hola , Soy Aimar <a
         href="https://www.linkedin.com/in/a-david-nino/"
         target="_blank"
@@ -62,5 +59,27 @@ import Prj from "./Projects.astro";
       <CodeIcon class="size-7" /> Proyectos
     </h2>
     <Prj />
+  </SectionContainer>
+  <SectionContainer id="Sobre-mi ">
+    <h2 class="text-2xl flex gap-x-3 items-center fond-semibold mb-8">
+      <UserIcon class="size-9" />
+      Sobre mi
+    </h2>
+    <p class="text-lg text-pretty mx-2 py-3">
+      Soy un apasionado de la tecnlogia ,Nacido en la Guajira Colombiana , <span
+        class="text-blue-400/80"
+      >
+        enfoque principal en el desarrollo web front-End utilizando librerias JS
+      </span>, Cuento con conocimentos en Back-End aunque son muy basicos.
+    </p>
+    <p class="text-lg text-pretty mx-2 py-3">
+      Me gusta estar aprender cosas nuevas que me puedan ayudar a crecer como
+      individuo y como profesional, Egresado de la CUC , <span
+        class="text-blue-400/80"
+      >
+        mis focos son principalmente el desarrollo de software, gestion de
+        proyectos y manejo de redes.
+      </span>
+    </p>
   </SectionContainer>
 </main>

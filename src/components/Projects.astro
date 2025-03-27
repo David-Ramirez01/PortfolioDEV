@@ -5,6 +5,7 @@ import boostrapIcon from "./Icons/bootstrap.astro";
 import TypeScriptIcon from "./Icons/TypeScript.astro";
 import LaravelIcon from "./Icons/Laravel.astro";
 import GithubIcon from "./Icons/Github.astro";
+import JavaIcon from "./Icons/JaIcon.astro";
 
 const TAGS = {
   React: {
@@ -32,6 +33,11 @@ const TAGS = {
     class: "bg-red-400 text-white",
     icon: LaravelIcon,
   },
+  Javascript: {
+    name: "Javascript",
+    class: "bg-yellow-400 text-black",
+    icon: JavaIcon,
+  },
 };
 
 const Prj = [
@@ -43,15 +49,6 @@ const Prj = [
     github: "https://github.com/David-Ramirez01/Test-CB",
     image: "/projects/auth.webp",
     tags: [TAGS.React, TAGS.Firebase, TAGS.boostrap, TAGS.typeSript],
-  },
-  {
-    title: "Notes App",
-    description:
-      "proyecto Web utilizando Laravel(PHP) y JavaScript para la creación de notas",
-    link: "#",
-    github: "https://github.com/David-Ramirez01/app_notas",
-    image: "https://placehold.co/400x200",
-    tags: [TAGS.Laravel, TAGS.typeSript],
   },
 ];
 ---
